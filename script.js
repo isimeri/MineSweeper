@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cell.innerHTML = data;
             if(nrUncovered===width*width-nrBombs){
                 gameOver=true;
-                alert("such win, much wow");
+                alert("u r winnar wow");
                 return;
             }
             clickCallback(cell, id);
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let leftEdge = (i%10===0);
             let rightEdge = (i%10===width-1);
             let cell = cellArray[i];
-            console.log("yo ",cell);
+            //console.log("yo ",cell);
             if(cellArray[i].classList.contains("empty")){
 
                 let data = 0;
@@ -144,12 +144,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let leftEdge = (id%10===0);
         let rightEdge = (id%10===width-1);
         let data = parseInt(cell.getAttribute("data"));
-        console.log("estem in callback");
-        console.log(`data${data} left edge${leftEdge} id ${id}`);
+        //console.log("estem in callback");
+        //console.log(`data${data} left edge${leftEdge} id ${id}`);
         if(data === 0){
-            console.log("suntem in iful mare");
+            //console.log("suntem in iful mare");
             if(!leftEdge && id > 10){   //top left neighbor
-                console.log("mesaj in plm");
+                //console.log("mesaj in plm");
                 clickCell(cellArray[id - width - 1]);
             }
             if(id > 9){ //top neighbor
