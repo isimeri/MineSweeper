@@ -1,0 +1,51 @@
+body{
+    background-color:rgb(26, 59, 26)
+}
+.supreme-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    height: 600px;
+    width: 600px;
+    background-color: #888;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell{
+    height: 58px;
+    width: 58px;
+    border: 1px solid #444;
+}
+.revealedBomb{
+    border: 1px solid rgb(110, 58, 6);
+    background-color: #c84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.uncovered{
+    background-color: green;
+    border: 1px solid darkgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: rgb(9, 51, 9);
+}
+.flag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.flags-left{
+    margin-top: 30px;
+    color: white;
+    font-size: 1.4rem;
+}
