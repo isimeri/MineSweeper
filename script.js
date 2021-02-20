@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 cell.innerHTML = data;
             if(nrUncovered===width*width-nrBombs){
                 gameOver=true;
+                cellArray.forEach(cell => {
+                    if(cell.classList.contains("bomb") && !cell.classList.contains("flag")){
+                        cell.classList.add("revealedBomb");
+                        cell.innerHTML = "💣";
+                    }
+                })
                 alert("u r winnar wow");
                 return;
             }
