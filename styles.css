@@ -1,27 +1,90 @@
-body{
-    background-color:rgb(26, 59, 26)
+:root{
+    --board-width: 100%
 }
-.supreme-container{
-    height: 80vh;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#222;
+    color: #ded;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+.supreme-container{
+    padding: 0 2rem;
+    padding-top: 5vh;
 }
 
-.grid-container{
-    height: 600px;
-    width: 600px;
+h1{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-left, .grid-right{
+    padding: 1rem;
+    background-color: #111;
+}
+
+.grid-left{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+.grid-right{
+    text-align: center;
+}
+.instructions > p, .instructions > .list-wrapper{
+    margin-bottom: 1rem;
+}
+
+ol{
+    list-style-position: inside;
+}
+
+.highlight{
+    font-weight: bold;
+    color: #faa;
+}
+.flags-left{
+    color: #ded;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.game-over-message{
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #ccc;
+    color: #111;
+}
+
+.board{
+    width: var(--board-width);
+    aspect-ratio: 1/1;
     background-color: #888;
     display: flex;
     flex-wrap: wrap;
+
 }
 .cell{
-    height: 58px;
-    width: 58px;
-    border: 1px solid #444;
+    width: calc(var(--board-width) / 10);
+    aspect-ratio: 1/1;
+    border: 1px solid #444d44;
+    user-select: none;
 }
-.revealedBomb{
+.revealed-bomb{
     border: 1px solid rgb(110, 58, 6);
     background-color: #c84;
     display: flex;
@@ -44,8 +107,19 @@ body{
     justify-content: center;
     font-size: 24px;
 }
-.flags-left{
-    margin-top: 30px;
-    color: white;
-    font-size: 1.4rem;
+footer{
+    background-color: #111;
+    padding: 0.5rem 1rem;
+    margin-top: auto;
+    text-align: center;
+    color: #ccc;
+}
+.author{
+    color: #ccc;
+}
+.author:hover{
+    color: #faa;
+}
+.hidden{
+    display: none;
 }

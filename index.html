@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-			  src="https://code.jquery.com/jquery-3.5.1.min.js"
-			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-			  crossorigin="anonymous"></script>
     <title>Minesweeper</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="supreme-container">
-        <div class="grid-container"></div>
-        <div class="flags-left">Flags left: 20</div>
-    </div>
+    <main class="supreme-container">
+        <h1>Minesweeper</h1>
+        <div class="grid">
+            <div class="grid-left">
+                <h2>Instructions</h2>
+                <div class="instructions">
+                    <p>To beat the game, you have to use your logic and the numbers that you will gradually uncover on the board to figure out where the bombs are.</p>
+                    <div class="list-wrapper">
+                        <p>This puzzle can be solved in two ways:</p>
+                        <ol>
+                            <li>Flag all the bombs.</li>
+                            <li>Uncover all the non-bomb cells.</li>
+                        </ol>
+                    </div>
+                    <p>The number of flags left tells you the number of bombs present on the board.<br/>
+                    To place or remove a flag, use <span class="highlight">Ctrl + click</span>.</p>
+                </div>
+            </div>
+            <div class="board"></div>
+            <div class="grid-right">
+                <div class="flags-left">Flags left: 20</div>
+                <div class="game-over-message hidden"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Developed by <a href="https://github.com/isimeri" class="author">isimeri</a></p>
+    </footer>
 </body>
 </html>
