@@ -95,7 +95,7 @@ function clickCell(domCell){
             gameArray.forEach((item, index) => {
                 if(item.bomb && !domCellArray[index].classList.contains("flag")){
                     domCellArray[index].classList.add("revealed-bomb");
-                    domCellArray[index].innerHTML = "💣";
+                    domCellArray[index].innerHTML = `<svg class="bomb-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bomb</title><path d="M11.25,6A3.25,3.25 0 0,1 14.5,2.75A3.25,3.25 0 0,1 17.75,6C17.75,6.42 18.08,6.75 18.5,6.75C18.92,6.75 19.25,6.42 19.25,6V5.25H20.75V6A2.25,2.25 0 0,1 18.5,8.25A2.25,2.25 0 0,1 16.25,6A1.75,1.75 0 0,0 14.5,4.25A1.75,1.75 0 0,0 12.75,6H14V7.29C16.89,8.15 19,10.83 19,14A7,7 0 0,1 12,21A7,7 0 0,1 5,14C5,10.83 7.11,8.15 10,7.29V6H11.25M22,6H24V7H22V6M19,4V2H20V4H19M20.91,4.38L22.33,2.96L23.04,3.67L21.62,5.09L20.91,4.38Z" /></svg>`;
                 }
             });
             win();
@@ -113,7 +113,7 @@ function addFlag(cell){
     if(!cell.classList.contains("uncovered")){
         if(!cell.classList.contains("flag") && nrFlags < nrBombs){
             cell.classList.add("flag");
-            cell.innerHTML = "🚩"
+            cell.innerHTML = `<svg class="flag-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>flag-variant</title><path d="M6,3A1,1 0 0,1 7,4V4.88C8.06,4.44 9.5,4 11,4C14,4 14,6 16,6C19,6 20,4 20,4V12C20,12 19,14 16,14C13,14 13,12 11,12C8,12 7,14 7,14V21H5V4A1,1 0 0,1 6,3Z" /></svg>`;
             nrFlags++;
             nrFlagsDiv.innerText = `Flags left: ${20 - nrFlags}`;
             checkForWin();
@@ -213,7 +213,7 @@ function lose(domCell, id){
     domCellArray.forEach((c, index) => {
         if(gameArray[index].bomb){
             c.classList.add("revealed-bomb");
-            c.innerHTML = "💣";
+            c.innerHTML = `<svg class="bomb-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bomb</title><path d="M11.25,6A3.25,3.25 0 0,1 14.5,2.75A3.25,3.25 0 0,1 17.75,6C17.75,6.42 18.08,6.75 18.5,6.75C18.92,6.75 19.25,6.42 19.25,6V5.25H20.75V6A2.25,2.25 0 0,1 18.5,8.25A2.25,2.25 0 0,1 16.25,6A1.75,1.75 0 0,0 14.5,4.25A1.75,1.75 0 0,0 12.75,6H14V7.29C16.89,8.15 19,10.83 19,14A7,7 0 0,1 12,21A7,7 0 0,1 5,14C5,10.83 7.11,8.15 10,7.29V6H11.25M22,6H24V7H22V6M19,4V2H20V4H19M20.91,4.38L22.33,2.96L23.04,3.67L21.62,5.09L20.91,4.38Z" /></svg>`;
         }
     });
 }
@@ -221,7 +221,7 @@ function lose(domCell, id){
 function win(){
     gameOver = true;
     gameOverMsg.classList.remove("hidden");
-    gameOverMsg.textContent = "You won! Very cool!";
+    gameOverMsg.textContent = "You won!";
 }
 
 createBoard();
