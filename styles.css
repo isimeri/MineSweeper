@@ -4,10 +4,10 @@
     --red0: hsl(356, 68%, 34%);
     --red1: hsl(357, 69%, 45%);
     --red2: hsl(357, 69%, 65%);
-    --green0: hsl(75, 20%, 22%);
-    --green1: hsl(75, 40%, 34%);
-    --green2: hsl(75, 46%, 49%);
-    --green3: hsl(75, 46%, 63%);
+    --green0: hsl(95, 20%, 22%);
+    --green1: hsl(95, 40%, 34%);
+    --green2: hsl(95, 46%, 49%);
+    --green3: hsl(95, 46%, 63%);
     --blue0: hsl(236, 58%, 34%);
 }
 *{
@@ -54,17 +54,20 @@ h1{
 }
 
 .grid-left{
-    
     grid-area: grid-left;
     font-size: 1.1rem;
     line-height: 1.6;
 }
 .grid-right{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     grid-area: grid-right;
+    gap: 0.5rem;
 }
+
+
 
 
 .grid-left > h2{
@@ -86,13 +89,31 @@ ol{
 }
 .flags-left{
     font-size: 1.4rem;
+    text-align: center;
 }
 
 .game-over-message{
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1.4rem;
     background-color: #ccc;
     color: #111;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+
+.restart-btn{
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: var(--green2);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.restart-btn:hover{
+    background-color: var(--green3);
 }
 
 .board{
@@ -160,6 +181,30 @@ footer{
     visibility: hidden;
 }
 
+@media screen and (min-width: 450px) {
+    .grid-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: grid-right;
+        gap: 0.5rem;
+    }
+
+    .flags-left{
+        text-align: start;
+    }
+    .game-over-message{
+        padding: 1rem;
+        margin-left: auto;
+    }
+
+    .restart-btn{
+        padding: 1rem;
+    }
+}
+
+
 @media screen and (min-width: 600px) {
     .board{
         --board-padding: 1rem;
@@ -192,6 +237,13 @@ footer{
     }
     .flags-left{
         margin-bottom: 1rem;
+    }
+    .game-over-message{
+        margin-left: 0;
+    }
+
+    .restart-btn{
+        margin-top: auto;
     }
 }
 
