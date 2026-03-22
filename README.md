@@ -22,7 +22,7 @@ Packages used:
 2. Run these commands, in this order, inside the root folder:  
   2a. `npm install`  
   2b. `npm run build`  
-  2c. `npm run dev`
+  2c. `npm run preview`
 3. Now the app should be accessible at *`localhost:8080`*
 ## Demo
 Link: [Click here for a live preview](https://isimeri.github.io/minesweeper/)
