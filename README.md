@@ -1,4 +1,4 @@
-## Minesweeper -- [[live]](https://isimeri.github.io/MineSweeper/)
+## Minesweeper -- [[live]](https://isimeri.github.io/minesweeper/)
 
 The timeless, classic game of Minesweeper.  
 In order to win, you must either mark all the bombs, or uncover all the cells that are not bombs.  
@@ -8,11 +8,21 @@ For example, a cell containing number **2** means that **2** out of its 8 neighb
 ![Image Chest](https://cdn.imgchest.com/files/c378755cce3d.png)
 
 ## Tech Stack
+Languages used:
 - HTML
 - CSS
 - JavaScript
+
+Packages used:
+- Webpack
+- Babel
+- Autoprefixer
 ## How to run locally
 1. Clone the repo
-2. Either open `index.html` directly in the browser or run it with something like *Live Server*
+2. Run these commands, in this order, inside the root folder:  
+  2a. `npm install`  
+  2b. `npm run build`  
+  2c. `npm run dev`
+3. Now the app should be accessible at *`localhost:8080`*
 ## Demo
-Link: [Click here for a live preview](https://isimeri.github.io/MineSweeper/)
+Link: [Click here for a live preview](https://isimeri.github.io/minesweeper/)

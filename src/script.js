@@ -1,3 +1,4 @@
+require("./styles.css");
 const grid = document.querySelector(".board");
 const nrFlagsDiv = document.querySelector(".flags-left");
 const gameOverMsg = document.querySelector(".game-over-message");

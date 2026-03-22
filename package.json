@@ -1,0 +1,43 @@
+{
+  "name": "minesweeper",
+  "version": "1.0.0",
+  "description": "The timeless, classic game of Minesweeper",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isimeri/minesweeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/isimeri/minesweeper/issues"
+  },
+  "homepage": "https://github.com/isimeri/minesweeper#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-transform-arrow-functions": "^7.27.1",
+    "@babel/preset-env": "^7.29.2",
+    "autoprefixer": "^10.4.27",
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^5.6.6",
+    "postcss-loader": "^8.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "iOS >= 9"
+  ]
+}
